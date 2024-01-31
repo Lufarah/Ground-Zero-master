@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,44 +11,64 @@
 </head>
 <body>
 
+
   <!--Creacion De la barra de busqueda-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(200, 214, 214);">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Ground Zero</a>
+      <a class="navbar-brand" href="{% url 'inicio' %}">Ground Zero</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Galeria.html">Galeria</a>
+            <a class="nav-link" href="{% url 'galeria' %}">Galeria</a>
           </li>
           <li class="nav-item">
-            <a  class="nav-link active" href="ticket.html">Ticket</a>
+            <a  class="nav-link active" href="{% url 'ticket' %}">Ticket</a>
+            
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio de sesion</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Clientes</a>
+        </li>
+        <li class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         {% if user.is_authenticated %}
+             {{user.username}}
+          {% else %}
+             <a href="{% url 'inicio' %}">login</a>
+          {% endif %}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'logout' %}">Cerrar sesión</a>
+          </div>
+      </li>
         </ul> 
       </div>
     </div>
   </nav>
->
-  </nav>
+
 
 <div class="titulo">
-    <H1>Esculturas</H1>
+    <H1>Tejidos</H1>
 </div>
 
 <div id="Descripcion">
-    <h2>Cristo Redentor</h2>
-        <p class="texto"> País: Brasil </p>
-        <p class="texto"> Artista: Paul Landowski </p>
-        <p class="texto"> Año: 1931 </p>
-        <p class="texto"> Altura: 98 pies </p>
-        <p class="texto"> Peso: 635 toneladas </p>
+    <h2>Bleached Coral</h2>
+        <p class="texto"> País: Portugal </p>
+        <p class="texto"> Artista: Vanessa Barragao </p>
+        <p class="texto"> Año: 2023 </p>
+        <p class="texto"> Tecnica: Crochet - Bordado - Tejido </p>
+  
     <div id="imagen">
-        <img src="Cristo-redentor.jpg" alt="noche estrellada" style="width: 500px;height: 600px;">
+        <img src="bleached.jpg" alt="noche estrellada" style="width: 500px;height: 600px;">
         
     </div>
 </div>
