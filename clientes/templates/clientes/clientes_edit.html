@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+      {% if cliente %} 
+
+        <h2>Formulario actualizar para Clientes</h2>
+        <form action="{% url 'clientesUpdate' %}" method="POST">
+               {% csrf_token %}
+   
+               <pre>Rut:              <input type="text" name="rut" value="{{cliente.rut}}"></pre>
+               <pre>Nombre:           <input type="text" name="nombre" value="{{cliente.nombre}}"></pre>
+               <pre>Apellido P.:      <input type="text" name="paterno" value="{{cliente.apellido_paterno}}"></pre>
+               <pre>Apellido M.:      <input type="text" name="materno" value="{{cliente.apellido_materno}}"></pre>
+               <pre>Fecha Nac.:       <input type="date" name="fechaNac" value="{{cliente.fecha_nacimiento|date:'Y-m-d'}}"></pre>
+               <pre>Género:           <select name="genero">
+
+                    {% for genero in generos %}
+                       {% if genero.genero == cliente.id_genero.genero %}
+                           <option value="{{genero.id_genero}}" selected>{{genero.genero}}</option>
+                       {% else % }
+                           <option value="{{genero.id_genero}}">{{genero.genero}}</option> 
+                       {% endif %}  
+                    {% endfor %}
+               </select></pre>
+               <pre>Celular:          <input type="text" name="telefono"></pre>
+               <pre>Email:            <input type="mail" name="email"></pre>
+               <pre>Dirección:        <input type="text" name="direccion"></pre>
+               <input type="submit" name="opcion" value="Actualizar">
+           </form><br/><br/>
+      {% endif %}
+        <div id="idMensajes">
+            {% if mensaje %}
+            {{mensaje}}
+            {% endif %}
+        </div>
+
+
+
+           <a href="{% url 'crud' %}">Volver</a>
+           <br/>
+       </div>
+   
+       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
