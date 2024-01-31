@@ -10,9 +10,7 @@
     <script src="{% static 'https://unpkg.com/sweetalert/dist/sweetalert.min.js' %}"></script>
     <script> scr="{% static 'home\assets\js\validaciones.js' %}"</script>
 </head>
-<body>
-
-
+<body style="background-color: aquamarine;">
    <!--Creacion De la barra de busqueda-->
    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(200, 214, 214);">
     <div class="container-fluid">
@@ -61,14 +59,18 @@
 
   <!--creacion formulario-->
 
-  <BR/>
+<BR/>
 <div class="container">
 <div class="row">
 <form id="formulario">
-  <h1>FORMULARIO TICKET</h1>
+  <h1>TICKET SUBIR IMAGEN</h1>
   <div class="form-group">
     <label for="InputEmail1" style="color: black;">Correo electrónico</label>
     <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div>
+    <label for="img">Selecciona imangen</label>
+    <input type="file">
   </div>
   <div class="mb-3">
     <label for="Textarea1" class="form-label" style="color: black;">Comentarios</label>
