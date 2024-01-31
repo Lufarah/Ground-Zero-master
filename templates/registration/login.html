@@ -1,16 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/assets/css/style.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <h2>LOG IN</h2>
+    <h2>INICIO DE SESION</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Log In</button>
+        <button type="submit">Ingresar</button>
     </form>
+
+    <a id="Volver" href="{% url 'home' %}">Volver</a>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style-obras.css">
+    <link rel="stylesheet" href="{% static 'home\assets\css\style-obras.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ground Zero</title>
@@ -67,12 +67,12 @@
         <p class="texto"> Técnicas y materiales: óleo sobre lienzo </p>
   
     <div id="imagen">
-        <img src="noche-estrellada.jpg" alt="noche estrellada" style="width: 500px;height: 600px;">
+        <img src="{% static 'home\assets\img\noche-estrellada.jpg' %}" alt="noche estrellada" style="width: 500px;height: 600px;">
         
     </div>
 </div>
 
-<a id="Volver" href="Galeria.html">Volver</a>
+<a id="Volver" href="{% url 'galeria' %}">Volver</a>
 
 
 

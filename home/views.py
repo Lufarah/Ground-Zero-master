@@ -39,3 +39,19 @@ def inicio(request):
 def galeria(request):
     context={}
     return render(request, 'home/Galeria.html', context)
+
+def escultura(request):
+    context={}
+    return render(request, 'home/escultura.html', context)
+
+def pintura(request):
+    context={}
+    return render(request, 'home/pintura.html', context)
+
+def tejidos(request):
+    context={}
+    return render(request, 'home/tejido.html', context)
+
+def orfebreria(request):
+    context={}
+    return render(request, 'home/orfebreria.html', context)

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style-obras.css">
+    <link rel="stylesheet" href="{% static 'home\assets\css\style-obras.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
@@ -69,31 +69,31 @@
 
 
 <div class="card" style="width: 18rem;">
-  <img src="noche-estrellada.jpg" class="card-img-top" alt="noche-estrellada">
+  <img src="{% static 'home\assets\img\noche-estrellada.jpg' %}" class="card-img-top" alt="noche-estrellada">
   <div class="card-body">
     <h5 class="card-title">La Noche Estrellada</h5>
-    <a href="pintura.html" class="btn btn-primary">Mas info</a>
+    <a href="{% url 'pintura' %}" class="btn btn-primary">Mas info</a>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
-  <img src="Cristo-redentor.jpg" class="card-img-top" alt="Cristo-redentor">
+  <img src="{% static 'home\assets\img\Cristo-redentor.jpg' %}" class="card-img-top" alt="Cristo-redentor">
   <div class="card-body">
     <h5 class="card-title">Cristo Redentor</h5>
-    <a href="escultura.html" class="btn btn-primary">Mas info</a>
+    <a href="{% url 'escultura' %}" class="btn btn-primary">Mas info</a>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
-  <img src="bleached.jpg" class="card-img-top" alt="bleached">
+  <img src="{% static 'home\assets\img\bleached.jpg' %}" class="card-img-top" alt="bleached">
   <div class="card-body">
     <h5 class="card-title">Bleached Coral</h5>
-    <a href="tejido.html" class="btn btn-primary">Mas info</a>
+    <a href="{% url 'tejidos' %}" class="btn btn-primary">Mas info</a>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
-  <img src="rem.jpg"  alt="Ram-en-un-matorral">
+  <img src="{% static 'home\assets\img\rem.jpg' %}"  alt="Ram-en-un-matorral">
   <div class="card-body">
     <h5 class="card-title">Ram en un matorral</h5>
-    <a href="orfebreria.html" class="btn btn-primary">Mas info</a>
+    <a href="{% url 'orfebreria' %}" class="btn btn-primary">Mas info</a>
   </div>
 </div>
 

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style-obras.css">
+    <link rel="stylesheet" href="{% static 'home\assets\css\style-obras.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ground Zero</title>
@@ -68,13 +68,13 @@
         <p class="texto"> Tamaño: 45,7 cm (18,0 pulgadas) de alto, 30,5 cm (12,0 pulgadas) de ancho </p>
         <p class="texto"> Materiales:	Oro, cobre, concha, piedra caliza y lapislázuli </p>
     <div id="imagen">
-        <img src="orfe.JPG" alt="noche estrellada" style="width: 500px;height: 600px;">
+        <img src="{% static 'home\assets\img\orfe.JPG' %}" alt="noche estrellada" style="width: 500px;height: 600px;">
         
     </div>
 </div>
 
 
-<a id="Volver" href="Galeria.html">Volver</a>
+<a id="Volver" href="{% url 'galeria' %}">Volver</a>
 
 
 

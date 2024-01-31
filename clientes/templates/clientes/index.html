@@ -1,6 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'home\assets\css\styles.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,7 +12,8 @@
 
     {% for cliente in clientes %}
 
-        {{cliente.rut}}, {{cliente.nombre}}, {{cliente.apellido_paterno}}, {{cliente.apellido_materno}}, {{cliente.id_genero.genero}}
+        {{cliente.rut}}, {{cliente.nombre}}, {{cliente.apellido_paterno}},
+         {{cliente.apellido_materno}}, {{cliente.id_genero.genero}}
 
     {% endfor%}
 

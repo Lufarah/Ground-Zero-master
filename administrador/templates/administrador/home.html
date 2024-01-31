@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/assets/css/style.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home - iniciar sesion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -51,8 +53,8 @@
     </div>
   </nav>
 
-    <a href="{% url 'login' %}">iniciar sesion</a>
+    <a href="{% url 'login' %}" id="iniciar" style="position: relative;left: 450px;">Iniciar Sesion</a>
 
-    <a href="{% url 'crear-usuario' %}">Registrarse</a>
+    <a href="{% url 'crear-usuario' %}" id="Registrarse" style="position: relative;left: 600px;">Registrarse</a>
 </body>
 </html>
